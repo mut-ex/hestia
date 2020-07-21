@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Let's go!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylemin.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <h4><i>general </i>🌐</h4>
+                <a href="https://wiki.archlinux.org/" class="link">ArchWiki</a>
+                <a href="https://drive.google.com/drive/u/0/my-drive" class="link">Drive</a>
+                <a href="https://www.reddit.com/r/thinkpad/" class="link">/r/thinkpad</a>
+                <a href="https://www.amazon.com" class="link">Amazon</a>
+            </div>
+            <div class="card">
+                <h4><i>dev </i>🤖</h4>
+                <a href="https://github.com/" class="link">GitHub</a>
+                <a href="file:///home/mutex/cloned/awesome-git/src/build/doc/index.html" class="link">AwesomeWM docs</a>
+                <a href="file:///home/mutex/documents/documentation/lua/www.lua.org/manual/index.html" class="link">Lua
+                    docs</a>
+            </div>
+            <div class="card">
+                <h4><i>design </i>🎨</h4>
+                <a href="https://www.remixicon.com/" class="link">Remix Icon</a>
+                <a href="https://type-scale.com/" class="link">Type Scale</a>
+                <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white"
+                    class="link">Color Scale</a>
+                <a href="https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5" class="link">coolors</a>
+                <a href="https://www.colourlovers.com/palettes/search?query=" class="link">COLOURlovers</a>
+                <a href="https://www.color-hex.com/" class="link">color-hex</a>
+                <a href="http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20"
+                    class="link">ASCII Graffiti</a>
+            </div>
+        </div>
+        <div id="datetime"></div>
+    </div>
+
+    <script>var dt = new Date();
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dev"];
+        var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        var d = new Date();
+        var time = d.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
+        var datetimestr = time + " <i>on</i> " + dayNames[dt.getDay()] + ", " + monthNames[dt.getMonth()] + " " + dt.getDate()
+        document.getElementById("datetime").innerHTML = datetimestr</script>
+</body>
+
+</html>
