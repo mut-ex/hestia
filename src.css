@@ -1,13 +1,24 @@
 html {
     font-size: 100%;
+    --bg-color: #31313a;
+    --body-color: #fff8f0;
+    --heading-font: "Enfantine Web", monospace;
+    --heading-color: #caffbf;
+    --link-font:   "Inter Text", sans-serif;
+    --link-color-normal: #9bf6ff;
+    --link-border-color-normal: #9bf6ff;
+    --link-color-hover: #fdffb6;
+    --link-border-color-hover: #fdffb6;
+    --datetime-font:"Enfantine Web", monospace;
+    --datetime-color: #ffd6a5;
 }
 
 /*16px*/
 
 body {
-    background-color: #2b2d42;
+    background-color: var(--bg-color);
     line-height     : 1.65;
-    color           : #FFF8F0;
+    color           : var(--body-color);
     margin          : 0;
 }
 
@@ -21,8 +32,10 @@ h3,
 h4,
 h5 {
     margin     : 2.75rem 0 1.05rem;
-    font-family: "Victor Mono", monospace;
-    font-weight: 700;
+    /* font-family: "Dank Mono", monospace; */
+    font-family: var(--heading-font);
+
+    font-weight: 500;
     line-height: 1.15;
 }
 
@@ -42,7 +55,7 @@ h3 {
 h4 {
     font-size     : 1.563em;
     padding-bottom: 1em;
-    color         : #F4D06F;
+    color         : var(--heading-color);
 }
 
 h5 {
@@ -64,24 +77,23 @@ small,
 .link {
     /* text-transform : lowercase; */
     text-decoration: none;
-    color          : #FFF8F0;
-    font-family    : "Victor Mono",
-        monospace;
+    color          : var(--link-color-normal);
+    font-family    : var(--link-font);
     font-weight   : 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 1px;
     margin        : 0em 0em 1em 0em;
     padding       : 0.5em;
     transition    : color 0.15s, left 0.15s, border 0.15s;
     position      : relative;
     left          : 0;
-    border        : 0.5px solid #FFF8F01a;
+    border        : 0.5px solid var(--link-border-color-normal);
     border-radius : 3px;
 }
 
 .link:hover {
-    color : #9DD9D2;
+    color : var(--link-color-hover);
     left  : 6px;
-    border: 0.5px solid #9DD9D2;
+    border: 0.5px solid var(--link-border-color-hover);
 }
 
 .container {
@@ -101,14 +113,18 @@ small,
     align-items    : center;
 }
 
+.not-highlight {
+    opacity: 0.5;
+    color: #fefefa;
+}
+
 #datetime {
     margin    : 1em;
     padding   : 1em;
     /* width  : 90vw; */
     text-align: center;
-    color     : #9DD9D2;
-    font-family: "Victor Mono",
-        monospace;
-    font-weight: 600;
+    color     : var(--datetime-color);
+    font-family: var(--datetime-font);
+    /* font-weight: 600; */
     font-size  : 1.563em;
 }
