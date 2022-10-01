@@ -7,6 +7,7 @@
         <title>Let's go!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//db.onlinewebfonts.com/c/e01985563d93dd242fe7fc8c87e7524c?family=Enfantine+Web" rel="stylesheet" type="text/css"/> 
         <link rel="stylesheet" href="src.css">
     </head>
 
@@ -76,11 +77,11 @@
             ];
             function startTime() {
                 var today = new Date();
-                var amorpm = " am "
+                var amorpm = " am ";
                 var h = today.getHours();
                 if (h > 12) {
-                    h = 24 - h
-                    amorpm = " pm "
+                    h = 24 - h;
+                    amorpm = " pm ";
                 }
                 var m = today.getMinutes();
                 var s = today.getSeconds();
@@ -88,12 +89,12 @@
                 s = checkTime(s);
                 var out = h + ":" + m + amorpm + "<span class='not-highlight'> on </span>" + e[dt.getDay()] + ", " + a[dt.getMonth()] + " " + dt.getDate();
 
-                document.getElementById('datetime').innerHTML = out
+                document.getElementById('datetime').innerHTML = out;
                 var t = setTimeout(startTime, 500);
             }
             function checkTime(i) {
                 if (i < 10) {
-                    i = "0" + i
+                    i = "0" + i;
                 };
                 return i;
             }

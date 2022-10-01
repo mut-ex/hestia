@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Enfantine Web";
+    src: url(//db.onlinewebfonts.com/c/e01985563d93dd242fe7fc8c87e7524c?family=Enfantine+Web;
+  }
+  
 html {
     font-size: 100%;
     --bg-color: #31313a;
