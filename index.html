@@ -1,104 +1,110 @@
 <!DOCTYPE html>
 <html class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Let's go!</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.min.css" />
+  </head>
 
-<body onload="startTime()">
-    <div class="main">
-        <div class="container">
-            <div class="card">
-                <h4>general 🌐</h4>
-                <a href="https://www.icloud.com/" class="link">iCloud</a>
-                <a href="https://wiki.archlinux.org/" class="link">ArchWiki</a>
-                <a href="https://drive.google.com/drive/u/0/my-drive" class="link">Drive</a>
-                <a href="http://libgen.rs/" class="link">Library Genesis</a>
-                <a href="https://www.gmail.com" class="link">GMail</a>
-            </div>
-            <div class="card">
-                <h4>dev 🤖</h4>
-                <a href="https://github.com/" class="link">GitHub</a>
-                <a href="https://devdocs.io/lua~5.3/" class="link">Lua
-                    docs</a>
-                <a href="https://awesomewm.org/apidoc/" class="link">AwesomeWM docs</a>
-                <a href="https://github.com/awesomeWM/awesome" class="link">AwesomeWM repository</a>
-            </div>
-            <div class="card">
-                <h4>design 📐</h4>
-                <a href="https://www.thingiverse.com" class="link">Thingiverse</a>
-                <a href="https://grabcad.com/library" class="link">GrabCAD</a>
-                <a href="https://material.io/components" class="link">Material Design Components</a>
-                <a href="https://www.remixicon.com/" class="link">Remix Icon</a>
-                <a href="https://type-scale.com/" class="link">Type Scale</a>
-            </div>
-            <div class="card">
-                <h4>colors 🌈</h4>
-                <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white"
-                    class="link">Color Scale</a>
-                <a href="https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5" class="link">Coolors</a>
-                <a href="https://www.colourlovers.com/palettes/search?query=" class="link">COLOURlovers</a>
-                <a href="https://www.color-hex.com/" class="link">Color Hex</a>
-                <a href="https://colorhunt.co/" class="link">Color Hunt</a>
-            </div>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h4>🌐 general</h4>
+          <a href="https://mail.proton.me/u/0/inbox">Proton Mail</a>
+          <a href="https://stopwatch-gn98.onrender.com/">Stopwatch</a>
+
+          <a href="https://annas-archive.pk/">Anna's Archive</a>
+          <a href="https://www.icloud.com/">iCloud</a>
+          <a href="https://wiki.archlinux.org/">ArchWiki</a>
         </div>
-        <div id="datetime"></div>
-    </div>
+        <div>
+          <h4>🤖 dev & docs</h4>
+          <a href="https://awesomewm.org/apidoc/">AwesomeWM docs</a>
+          <a href="https://devdocs.io/lua~5.3/">Lua docs</a>
+          <a href="https://i3wm.org/docs/">i3 WM</a>
+        </div>
+
+        <div>
+          <h4>📐 design</h4>
+          <a href="https://type-scale.com/">Type Scale</a>
+          <a
+            href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white"
+            >Color Scale</a
+          >
+          <a href="https://www.color-hex.com/color-palettes/popular.php"
+            >Color Hex</a
+          >
+          <a href="https://maketintsandshades.com/">Tint & Shade Generator</a>
+        </div>
+
+        <div>
+          <h4>♟️ chess</h4>
+          <a href="https://www.chess.com/">chess.com</a>
+          <a href="https://lichess.org/editor"
+            >Lichess <span class="unemphasise">></span> Editor</a
+          >
+          <a href="https://lichess.org/analysis"
+            >Lichess <span class="unemphasise">></span> Analysis</a
+          >
+          <a href="https://jhlywa.github.io/chess.js/">chess.js</a>
+        </div>
+        <div>
+          <h4>📗 vue</h4>
+          <a href="https://vuejs.org/guide/introduction.html">Vue.js</a>
+          <a href="https://vueuse.org/functions.html">VueUse</a>
+          <a href="https://primevue.org/autocomplete/">PrimeVue</a>
+          <a href="https://primevue.org/icons/">PrimeIcons</a>
+          <a href="https://primeflex.org">PrimeFlex</a>
+          <a href="https://reka-ui.com/docs/components/autocomplete">Reka UI</a>
+        </div>
+      </section>
+      <aside>
+        <span id="time"></span>
+        <span class="unemphasise">on</span> <span id="date"></span>
+      </aside>
+      <div id="datetimex"></div>
+    </main>
 
     <script>
-        var dt = new Date();
-        var a = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dev"
-        ];
-        var e = [
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
-        ];
-        function startTime() {
-            var today = new Date();
-            var amorpm = " am ";
-            var h = today.getHours();
-            if (h > 12) {
-                h = 24 - h;
-                amorpm = " pm ";
-            }
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            var out = h + ":" + m + amorpm + "<span class='not-highlight'> on </span>" + e[dt.getDay()] + ", " + a[dt.getMonth()] + " " + dt.getDate();
+      const timeEl = document.getElementById("time");
+      const dateEl = document.getElementById("date");
 
-            document.getElementById('datetime').innerHTML = out;
-            var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i;
-            };
-            return i;
-        }
+      function getFormattedDateTime() {
+        const now = new Date();
+
+        const time = now
+          .toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit",
+
+            hour12: true,
+          })
+          .toLowerCase();
+
+        const date = now.toLocaleDateString("en-US", {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        });
+
+        return { time, date };
+      }
+
+      function updateDateTime() {
+        const { time, date } = getFormattedDateTime();
+        timeEl.innerText = time;
+        dateEl.innerText = date;
+      }
+
+      window.addEventListener("load", (e) => {
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+      });
     </script>
-</body>
-
+  </body>
 </html>
